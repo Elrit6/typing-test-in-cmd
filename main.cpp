@@ -28,7 +28,6 @@ int getAcc(const size_t& progress, const size_t& errors) {
 }
 
 void displayText(size_t& progress, size_t& errors, const clock_t& startTime) {   
-    system("cls");
     string buffer;
     int acc = getAcc(progress, errors);
     buffer += 
@@ -42,6 +41,7 @@ void displayText(size_t& progress, size_t& errors, const clock_t& startTime) {
             buffer += "\033[42m" + string(1, text[i]) + "\033[0m";
         }
     }
+    system("cls");
     cout << buffer << endl;
 }
 
